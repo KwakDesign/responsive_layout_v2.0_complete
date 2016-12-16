@@ -1,0 +1,344 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #FAFAFA;
+	font-weight: 200;
+	line-height: 1.5;
+	font-family: 'Roboto', sans-serif;
+}
+
+p {
+	font-size: 1em;
+	margin-bottom: 1.8em;
+}
+
+h2,
+h3,
+a {
+	color: #000;
+}
+
+h2,
+h3,
+h4 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+h4 {
+	margin-bottom: .4em;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.name {
+	font-size: 1.6em;
+	margin: 0;
+}
+
+.main-nav {
+	margin-top: 5px;
+}
+
+.name a,
+.main-nav a,
+.contact-section a {
+	display: block;
+	text-align: center;
+}
+
+.name a {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+	
+.main-nav a {
+	font-weight: bold;
+	font-size: .95em;
+	text-transform: uppercase;
+	background-color: #FFF;
+	margin-bottom: 10px;
+	padding: 1em;
+}
+
+.contact-section a {
+	padding: 10px 15px;
+}
+
+/* ---- Layout Containers ---- */
+
+.introduction,
+.section-title,
+.portfolio-section,
+.contact-section {
+	text-align: center;
+}
+
+.container,
+.contact-section,
+footer	 {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.portfolio-section {
+	background-color: #FFF;
+	padding-bottom: 1.875em;
+}
+
+.section-title {
+	font-weight: bold;
+	font-size: 1em;
+	padding-top: 3.125em;
+	padding-bottom: 3.125em;
+}
+
+.container h3 {
+	font-weight: 500;
+	text-align: center;
+	margin-top: 0.9em;
+}
+
+.contact-section {
+	padding-bottom: 2.5em;
+}
+
+.divider {
+	border-top: 1px solid lightgray;
+	width: 92%;
+	margin: 0 auto;
+}
+
+footer {
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+/* ---- Page Elements ---- */
+
+.chuck {
+	padding-left: 3.75em;
+	padding-right: 3.75em;
+	margin-top: 2.5em;
+	margin-bottom: 0.625em;
+}
+
+.introduction p {
+	padding-left: 3em;
+	padding-right: 3em;
+}
+
+.portfolio-section p {
+	padding-left: 1.3em;
+	padding-right: 1.3em;
+}
+
+.contact-section p {
+	margin-top: 0;
+	margin-bottom: 1.25em;
+}
+
+.introduction p,
+.portfolio-section p,
+.contact-section p,
+.contact-info,
+.contact-section a {
+	color: gray;
+}
+
+.contact-info {
+	font-weight: bold;
+	margin-left: 1em;
+}
+
+.footer-name {
+	float: left;
+	font-size: 0.9em;
+}
+
+.back-to-top {
+	float: right;
+	font-weight: bold;
+	font-size: 0.9em;
+}
+
+.footer-nav {
+	display: none;
+}
+
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 768px) {
+	
+	.main-nav {
+		text-align: center;
+	}
+	
+	.main-nav li {
+		display: inline-block;
+	}
+	
+	.main-nav a {
+		background-color: transparent;
+	}
+	
+	.introduction {
+		padding: 3em 1.5em 3.75em 1.5em;
+	}
+	
+	.introduction p {
+		float: left;
+		font-size: 1.2em;
+		width: 55%;
+		text-align: left;
+		padding: 0;
+		margin: 0;
+	}
+	
+	.chuck {
+		float: right;
+		padding: 0;
+		margin: 0;
+		width: 40%;
+	}
+	
+	.portfolio-section li {
+		width: 50%;
+		float: left;
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+	}
+	
+	.portfolio-section p {
+		margin-top: 0.5em;
+		margin-bottom: 2em;
+	}
+	
+	.contact-section p {
+		font-size: 1.2em;
+		width: 70%;
+		margin: 0 auto;
+		text-align: center;
+		margin-bottom: 2em;
+	}
+	
+	.container,
+	.contact-section,
+	footer	 {
+		padding-left: 1.5em;
+		padding-right: 1.5em;
+	}
+	
+	.back-to-top {
+		display: none;
+	}
+	
+	.footer-nav {
+		display: inline-block;
+		float: right;
+		font-weight: bold;
+		font-size: 0.9em;
+	}
+	
+	.footer-nav li {
+		float: left;
+		margin-right: 10px;
+	}
+	
+	.footer-nav li:last-child {
+		margin-right: 0;
+	}
+}
+
+@media (min-width: 887px) and (max-width: 946px) {
+	
+	.portfolio-section li:nth-child(3n) {
+		clear: left;
+	}
+	
+	.portfolio-section li:last-child {
+		clear: right;
+	}
+	
+}
+
+@media (min-width: 1024px) {
+	
+	.name {
+		float: left;
+	}
+	
+	.main-nav {
+		float: right;
+		padding-top: 15px;
+	}
+	
+	.main-header {
+		padding-left: 1.5em;
+		padding-right: 0.5em;
+	}
+	
+	.introduction {
+		padding: 3em 3em 3.75em 3em;
+	}
+	
+	.main-header,
+	.introduction,
+	.portfolio-section {
+		max-width: 1024px;
+		margin: 0 auto;
+	}
+	
+	.portfolio-section li {
+		width: 33.3%;
+		float: left;
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+	}
+	
+	.introduction p {
+		width: 54%;
+	}
+	
+	.introduction p,
+	.contact-section p {
+		font-size: 1.2em;
+	}
+	
+	.contact-section p {
+		width: 47%;
+	}
+	
+	.divider {
+		width: 95%;
+	}
+
+}
